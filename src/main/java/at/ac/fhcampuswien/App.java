@@ -10,8 +10,24 @@ public class App {
     }
 
     //todo Task 2
-    public void stairs(){
+    public void stairs() {
         // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("n: ");
+        int rows = scanner.nextInt();
+        int number = 1;
+
+        if (rows > 0) {
+            for (int j = 0; j < rows; j++) {
+                for (int i = 0; i <= j; i++) {
+                    System.out.print(number + " ");
+                    number++;
+                }
+                System.out.println();
+            }
+        } else {
+            System.out.println("Invalid number!");
+        }
     }
 
     //todo Task 3
