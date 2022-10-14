@@ -86,35 +86,61 @@ public class App {
         char c = scanner.next().charAt(0);
 
         if (h % 2 != 0) {
+            for (int i = 0; i <= h / 2; i++) {
+                for (int j = i; j < h / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int k = 0 - i; k <= i; k++) {
+                    System.out.print((char) (c - Math.abs(k)));
+                }
+                System.out.println();
+            }
+            for (int i = h / 2; i > 0; i--) {
+                for (int j = i; j <= h / 2; j++) {
+                    System.out.print(" ");
+                }
+                for (int k = 0 - i + 1; k < i ; k++) {
+                    System.out.print((char) (c - Math.abs(k)));
+                }
+                System.out.println();
+            }
+
+
+            } else {
+            System.out.println("Invalid number!");
+
+        }
+    }
+
+        /*if (h % 2 != 0) {
             for (int i = 0; i <= (h / 2) +1; i++) {       //Obere Hälfte
                 for (int j = i; j <= h / 2; j++) {
                     System.out.print(" ");
                 }
                 for (int j = 1; j < i; j++) {
-                    System.out.print("*");
+                    System.out.print((char)(c-Math.abs(j)));
                 }
                 for (int j = 1; j <= i; j++) {
-                    System.out.print("*");
+                    System.out.print((char)(c+Math.abs(j)));
                 }
                 System.out.println();
             }
 
-            for (int i = 1; i <= h / 2; i++) {       //Untere Häflte
+            for (int i = 1; i <= h / 2; i++) {       //Untere Hälfte
                 for (int j = 1; j <= i; j++) {
                     System.out.print(" ");
                 }
                 for (int j = i; j < h / 2; j++) {
-                    System.out.print("*");
+                    System.out.print((char) (c-Math.abs(j)));
                 }
                 for (int j = i; j <= h / 2; j++) {
-                    System.out.print("*");
+                    System.out.print((char)(c+Math.abs(j)));
                 }
                 System.out.println();
             }
         }else {
             System.out.println("Invalid number!");
-        }
-    }
+        }*/
 
     //todo Task 5
     public void marks() {
