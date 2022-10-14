@@ -86,11 +86,11 @@ public class App {
         char c = scanner.next().charAt(0);
 
         if (h % 2 != 0) {
-            for (int i = 1; i <= (h / 2) ; i++) {       //Obere Hälfte
+            for (int i = 0; i <= (h / 2) +1; i++) {       //Obere Hälfte
                 for (int j = i; j <= h / 2; j++) {
                     System.out.print(" ");
                 }
-                for (int j = 1; j <= i; j++) {
+                for (int j = 1; j < i; j++) {
                     System.out.print("*");
                 }
                 for (int j = 1; j <= i; j++) {
@@ -103,7 +103,7 @@ public class App {
                 for (int j = 1; j <= i; j++) {
                     System.out.print(" ");
                 }
-                for (int j = i; j <= h / 2; j++) {
+                for (int j = i; j < h / 2; j++) {
                     System.out.print("*");
                 }
                 for (int j = i; j <= h / 2; j++) {
